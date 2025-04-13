@@ -1,0 +1,30 @@
+.container {
+  background-color: #5fa2d5; /* Navy blue */
+  color: white; /* Set the text color to white for better visibility */
+  padding: 2rem; /* Add some padding to the container */
+  border-radius: 10px; /* Add some rounded corners to the container */
+}
+.input-group input{
+  background-color: #f2f2f2;
+  height: fit-content;
+}
+.input-group-text {
+ /* Navy blue */
+  color:black; /* Set the text color to white for better visibility */
+  border-color: #000080; /* Set the border color to navy blue */
+}
+
+.form-control,
+.form-select {
+  background-color: #f2f2f2; /* Light gray background for the input fields */
+  border-color: #000080; /* Set the border color to navy blue */
+}
+
+.btn-primary {
+  background-color: #000080; /* Navy blue */
+  border-color: #000080; /* Set the border color to navy blue */
+}
+
+.btn-primary:hover {
+  background-color: #00008b; /* Slightly darker navy blue on hover */
+}

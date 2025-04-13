@@ -1,0 +1,9 @@
+.box {
+    border: 3px solid;
+    height: 200px; /* Height of the box */
+    margin-bottom: 10px; /* Spacing between boxes */
+  }
+  
+  .btn.active {
+    background-color: green;
+  }

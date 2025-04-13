@@ -1,0 +1,14 @@
+.container {
+    align-items: center;
+  }
+  
+  .input-group label {
+    line-height: 1.5; /* Adjust the line-height to match the input field height */
+  }
+  
+  .input-group input{
+    width: 10%;
+    border-radius: 40px;
+    border: 1px solid;
+  }
+  
