@@ -34,14 +34,15 @@ const YOUR_COMPUTER_IP = '192.168.160.194';
 // CORS configuration to allow requests from your frontend
 app.use(cors({
   origin: [
-    'http://localhost:5173'
+    'http://localhost:5174'
   ], 
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true,
 }));
 
 // MongoDB connection
-mongoose.connect(process.env.MONGO_URI || "mongodb://127.0.0.1:27017/Transport");
+mongoose.connect(process.env.MONGO_URI || "mongodb+srv://Dhayanidhi:Dhaya%40201004@dhaya10.ysjgouh.mongodb.net/Transport");
 
 // Express session configuration for session management
 app.use(session({ 
