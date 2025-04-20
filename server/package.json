@@ -3,16 +3,18 @@
   "version": "1.0.0",
   "description": "Backend server with Express and MongoDB",
   "main": "index.js",
+  "type": "module", 
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "postinstall": "npm rebuild"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "Dhayanidhi M",
   "license": "ISC",
   "engines": {
-    "node": "18.x"
+    "node": ">=18.0.0", 
+     "npm": ">=8.0.0"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -22,7 +24,6 @@
     "express": "^4.19.2",
     "express-session": "^1.18.0",
     "mongoose": "^7.6.0",
-    "mongoose-sequence": "^6.0.1",
     "node-cron": "^3.0.3",
     "nodemailer": "^6.9.13"
   },
