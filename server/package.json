@@ -19,7 +19,7 @@
     "express": "^4.19.2",
     "express-session": "^1.18.0",
     "mongoose": "^4.13.21",
-    "mongoose-auto-increment": "^5.0.1",
+    "mongoose-sequence": "^6.0.1",
     "node-cron": "^3.0.3",
     "nodemailer": "^6.9.13",
     "nodemon": "^3.1.0"
