@@ -1,0 +1,28 @@
+services:
+  - type: web
+    name: scholar-backend
+    env: node
+    plan: free
+    branch: main
+    rootDir: server     
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: MONGO_URI
+        value: mongodb://127.0.0.1:27017/Transport
+      - key: SMTP_HOST
+        value: smtp.gmail.com
+      - key: SMTP_PORT
+        value: "587"
+      - key: SMTP_MAIL
+        value: dhayanidhi102004@gmail.com
+      - key: SMTP_PASSWORD
+        value: mftq pxou zuls incx
+      - key: PORT
+        value: "3009"
+      - key: ADMIN_EMAIL
+        value: admin@gmail.com
+      - key: ADMIN_PASSWORD
+        value: admin123
+      - key: GOOGLE_CLIENT_ID
+        value: 530954320025-4klhga9id7rlhl15jat5scaek8o876le.apps.googleusercontent.com
