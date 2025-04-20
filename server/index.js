@@ -7,6 +7,7 @@ const fs = require('fs');
 const { Parser } = require('json2csv');
 const nodemailer = require("nodemailer");
 const dotenv = require("dotenv");
+dotenv.config();
 const session = require("express-session");
 //const QRSession = require("./models/QRSession");
 const StudentModel = require("./models/transport.js");
@@ -42,8 +43,9 @@ app.use(cors({
 }));
 
 // MongoDB connection
-mongoose.connect(process.env.MONGO_URI || "mongodb+srv://Dhayanidhi:Dhaya%40201004@dhaya10.ysjgouh.mongodb.net/Transport");
-
+mongoose.connect(process.env.MONGO_URI || "mongodb+srv://Dhayanidhi:Dhaya%40201004@dhaya10.ysjgouh.mongodb.net/Transport")
+  .then(() => console.log("MongoDB connected"))
+  .catch((err) => console.error("MongoDB connection error:", err));
 // Express session configuration for session management
 app.use(session({ 
   secret: process.env.SESSION_SECRET || 'your_secret_key',
