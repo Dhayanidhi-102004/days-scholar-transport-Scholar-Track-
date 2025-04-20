@@ -43,7 +43,7 @@ app.use(cors({
 }));
 
 // MongoDB connection
-mongoose.connect(process.env.MONGO_URI || "mongodb+srv://Dhayanidhi:Dhaya%40201004@dhaya10.ysjgouh.mongodb.net/Transport")
+mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log("MongoDB connected"))
   .catch((err) => console.error("MongoDB connection error:", err));
 // Express session configuration for session management
