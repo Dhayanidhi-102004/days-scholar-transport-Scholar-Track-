@@ -1,28 +1,53 @@
+# services:
+#   - type: web
+#     name: scholar-backend
+#     env: node
+#     plan: free
+#     branch: main
+#     rootDir: server     
+#     buildCommand: npm install
+#     startCommand: npm start
+#     envVars:
+#       - key: MONGO_URI
+#         value: mongodb+srv://Dhayanidhi:Dhaya%40201004@dhaya10.ysjgouh.mongodb.net/Transport
+#       - key: SMTP_HOST
+#         value: smtp.gmail.com
+#       - key: SMTP_PORT
+#         value: "587"
+#       - key: SMTP_MAIL
+#         value: dhayanidhi102004@gmail.com
+#       - key: SMTP_PASSWORD
+#         value: mftq pxou zuls incx
+#       - key: PORT
+#         value: "3009"
+#       - key: ADMIN_EMAIL
+#         value: admin@gmail.com
+#       - key: ADMIN_PASSWORD
+#         value: admin123
+#       - key: GOOGLE_CLIENT_ID
+#         value: 530954320025-4klhga9id7rlhl15jat5scaek8o876le.apps.googleusercontent.com
+
+
 services:
   - type: web
-    name: scholar-backend
+    name: dayscholar-backend
     env: node
     plan: free
-    branch: main
-    rootDir: server     
-    buildCommand: npm install
-    startCommand: npm start
+    buildCommand: cd server && npm install
+    startCommand: cd server && npm start
     envVars:
-      - key: MONGO_URI
-        value: mongodb+srv://Dhayanidhi:Dhaya%40201004@dhaya10.ysjgouh.mongodb.net/Transport
-      - key: SMTP_HOST
-        value: smtp.gmail.com
-      - key: SMTP_PORT
-        value: "587"
-      - key: SMTP_MAIL
-        value: dhayanidhi102004@gmail.com
-      - key: SMTP_PASSWORD
-        value: mftq pxou zuls incx
+      - key: NODE_ENV
+        value: production
       - key: PORT
-        value: "3009"
-      - key: ADMIN_EMAIL
-        value: admin@gmail.com
-      - key: ADMIN_PASSWORD
-        value: admin123
-      - key: GOOGLE_CLIENT_ID
-        value: 530954320025-4klhga9id7rlhl15jat5scaek8o876le.apps.googleusercontent.com
+        value: 10000   # or whatever your server runs on
+    autoDeploy: true
+
+  - type: web
+    name: dayscholar-frontend
+    env: static
+    buildCommand: cd client && npm install && npm run build
+    staticPublishPath: client/build
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html

@@ -18,6 +18,7 @@ const FacultyRegistration = () => {
   const [department, setDepartment] = useState('');
   const [contact, setContact] = useState('');
   const [place, setPlace] = useState('');
+  
 
 
   const [error, setError] = useState('');
